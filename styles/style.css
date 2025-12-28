@@ -16,6 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -48,12 +51,6 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
-}
-
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .content {
@@ -121,6 +118,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+  inline-size: 0;
 }
 
 .search-form__fieldset-title {
@@ -145,6 +143,8 @@ ol {
   text-decoration: none;
   color: #fff;
   display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .content__video-card-title {
@@ -164,8 +164,8 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -254,13 +254,13 @@ ol {
 
 .search-form__submit-button {
   inline-size: 194px;
-  block-size: 34px;
+  min-block-size: 34px;
   align-self: end;
 }
 
 .more-button {
   inline-size: 100%;
-  block-size: 34px;
+  min-block-size: 34px;
   cursor: pointer;
 }
 
@@ -281,15 +281,8 @@ ol {
   outline-offset: 1px;
 }
 
-.content__card-link {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  cursor: pointer;
-}
-
 .content__card-link_current {
-  background-color: transparent;
+  background-color: #545050;
 }
 
 .content__card-link:active {
